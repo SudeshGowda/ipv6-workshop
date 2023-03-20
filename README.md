@@ -96,6 +96,10 @@ ip -6 neigh show
 ```
 
 
+#### To cleanup the Testbed
+```bash
+sudo ip -all netns delete
+```
 
 ### 2. On Raspberry Pi:
  - Start up 2 rpis and connect them via ethernet cable
