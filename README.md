@@ -1,10 +1,25 @@
-# 6LOWPAN ND on FreeRTR
+# Neighbor Discovery on FreeRTR
 
-## Compilation
+## FreeRTR Installation
 
-Compile freeRtr source
+Note: Preferably use a VM for running Freertr. We are using local VMs.
+
+Install JRE
 ```bash
+sudo apt-get install --no-install-recommends --no-install-suggests --yes default-jre-headless
+```
+
+Installing Freertr from Source
+<br>
+
+Cloning the repo
+```bash
+git clone https://github.com/rare-freertr/freeRtr.git
 cd freeRtr/src/
+```
+
+Cleaning up and compiling
+```bash
 sudo ./c.sh
 ```
 
