@@ -31,6 +31,11 @@ cd freeRtr/misc/native
 sudo ./c.sh
 ```
 
+Install tshark
+```bash
+sudo apt-get install tshark
+```
+
 ## Testbed
 <br>
 
