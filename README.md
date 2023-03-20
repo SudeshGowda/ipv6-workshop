@@ -4,9 +4,10 @@
 
 Note: Preferably use a VM for running Freertr. We are using local VMs.
 
-Install JRE
+Install JRE and JDK
 ```bash
 sudo apt-get install --no-install-recommends --no-install-suggests --yes default-jre-headless
+sudo apt-get install default-jdk
 ```
 
 Installing Freertr from Source
@@ -118,22 +119,22 @@ The following topology is used here:
   ```
   - capture packets on br0
   ```bash
-  sudo tshark -i router_veth
+  sudo tshark -i br0
   ```
   - Start up the router with r1-hw-rpi.txt and r1-sw-rpi.txt as config
   ```bash
-  sudo ip netns exec router java -jar rtr.jar routersc r1-hw-rpi.txt r1-sw-rpi.txt
+  sudo java -jar rtr.jar routersc r1-hw-rpi.txt r1-sw-rpi.txt
   ```
   - ping the Link-local address of the host
   ```bash
-  ping -6 <host ip>
+  ping -6 <host ip> -I br0
   ```
 - Inside Host RPi:<br>
   - Capture packets on eth0
   ```bash
-  sudo tshark -i router_veth
+  sudo tshark -i eth0
   ```
   - ping the Link-local address of the router (as specified in freertr r1-sw-rpi.txt)
   ```bash
-  ping -6 fe80::1234:1234:5678:1234
+  ping -6 fe80::1234:1234:5678:1234 -I eth0
   ```
