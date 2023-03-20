@@ -27,7 +27,7 @@ sudo ./c.sh
 Compile additional tools
 ```bash
 sudo apt install dpdk-dev libmnl-dev libssl-dev libbpf-dev libpcap-dev clang dpdk llvm
-cd freeRtr/misc/native
+cd ../../freeRtr/misc/native
 sudo ./c.sh
 ```
 
