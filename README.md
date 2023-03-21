@@ -1,5 +1,7 @@
 # Neighbor Discovery on FreeRTR
 
+Session slides: https://docs.google.com/presentation/d/1-PRaRDdA4u-hRTq92_iB1rQBqI-J4PEM1TQD8HfjdOU/edit?usp=sharing
+
 ## FreeRTR Installation
 
 Note: Preferably use a VM for running Freertr. We are using local VMs.
